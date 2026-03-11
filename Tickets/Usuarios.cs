@@ -12,7 +12,19 @@ namespace Tickets
 {
     public partial class Usuarios : Form
     {
-        UsuarioDAL dal = new UsuarioDAL();
+      
+        CargarClientes objClientes = new CargarClientes();
+        GuardarClientes cliente = new GuardarClientes();
+        EliminarClientes eliminar = new EliminarClientes();
+        ActualizarCliente actualizar = new ActualizarCliente();
+
+        public void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtEmail.Clear();
+            txtUsuario.Clear();
+            txtContraseña.Clear();
+        }
         public Usuarios()
         {
             InitializeComponent();
@@ -25,25 +37,31 @@ namespace Tickets
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //        if (string.IsNullOrEmpty(txtNombre.Text) ||
-            //string.IsNullOrEmpty(txtApellido.Text) ||
-            //string.IsNullOrEmpty(txtCedula.Text) ||
-            //string.IsNullOrEmpty(txtCorreo.Text))
-            //        {
-            //            MessageBox.Show("Complete los campos");
-            //        }
-            //        else
-            //        {
-            //            cliente.GuardarCliente(txtNombre.Text, txtApellido.Text, txtCedula.Text, txtCorreo.Text);
+            if (string.IsNullOrEmpty(txtNombre.Text) ||
+    string.IsNullOrEmpty(txtEmail.Text) ||
+    string.IsNullOrEmpty(txtUsuario.Text) ||
+    string.IsNullOrEmpty(txtContraseña.Text))
+            {
+                MessageBox.Show("Complete los campos");
+            }
+            else
+            {
+                cliente.GuardarUsuario(txtNombre.Text, txtEmail.Text, txtUsuario.Text, txtContraseña.Text);
 
-            //            dgvClientes.DataSource = objClientes.MostrarClientes();
-            //            dgvClientes.ClearSelection(); // opcional para quitar la selección automática
+                //dgvClientes.DataSource = objClientes.MostrarClientes();
+                //dgvClientes.ClearSelection(); // opcional para quitar la selección automática
 
-            //            LimpiarCampos();
-            //            MessageBox.Show("Cliente guardado correctamente");
-            //        }
+                LimpiarCampos();
+                MessageBox.Show("Cliente guardado correctamente");
+            }
 
-            //    }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login mainForm = new Login(); 
+            mainForm.Show();
+            this.Hide();
         }
     }
 }

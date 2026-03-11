@@ -25,5 +25,35 @@ namespace Tickets
 
             cmd.ExecuteNonQuery();
         }
+
+
+        public void GuardarTickets(string descripcion, int id_cliente)
+        {
+            SqlCommand cmd = new SqlCommand("SP_guardarT", conexion.AbrirConexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@descripcion", descripcion);
+            cmd.Parameters.AddWithValue("@id_cliente", id_cliente);
+       
+
+            cmd.ExecuteNonQuery();
+        }
+
+
+        public void GuardarUsuario(string nombre, string email, string usuario, string contraseña)
+        {
+            SqlCommand cmd = new SqlCommand("sp_RegistrarUsuario", conexion.AbrirConexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.Parameters.AddWithValue("@contraseña", contraseña);
+
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }

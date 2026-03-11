@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvTickets = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtid_cliente = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -37,7 +37,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,13 +55,14 @@
             this.dgvTickets.Name = "dgvTickets";
             this.dgvTickets.Size = new System.Drawing.Size(676, 170);
             this.dgvTickets.TabIndex = 0;
+            this.dgvTickets.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTickets_CellClick);
             // 
-            // textBox5
+            // txtid_cliente
             // 
-            this.textBox5.Location = new System.Drawing.Point(34, 37);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 5;
+            this.txtid_cliente.Location = new System.Drawing.Point(34, 37);
+            this.txtid_cliente.Name = "txtid_cliente";
+            this.txtid_cliente.Size = new System.Drawing.Size(100, 20);
+            this.txtid_cliente.TabIndex = 5;
             // 
             // textBox6
             // 
@@ -83,7 +84,7 @@
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Location = new System.Drawing.Point(22, 150);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(549, 93);
@@ -108,6 +109,7 @@
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAgregar
             // 
@@ -117,6 +119,7 @@
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
@@ -127,12 +130,12 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Descripcion";
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtDescripcion.Location = new System.Drawing.Point(20, 49);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(177, 20);
+            this.txtDescripcion.TabIndex = 5;
             // 
             // groupBox2
             // 
@@ -140,7 +143,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtid_cliente);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Location = new System.Drawing.Point(22, 54);
@@ -210,11 +213,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTickets;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtid_cliente;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
