@@ -16,6 +16,7 @@ namespace Tickets
         GuardarClientes cliente = new GuardarClientes();
         EliminarClientes eliminar = new EliminarClientes();
         ActualizarCliente actualizar = new ActualizarCliente();
+         
         public Clientes()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Tickets
         {
             dgvClientes.DataSource = objClientes.MostrarClientes();
             dgvClientes.ClearSelection();
+            
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -113,6 +115,19 @@ namespace Tickets
             
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

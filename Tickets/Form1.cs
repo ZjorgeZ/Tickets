@@ -49,5 +49,10 @@ namespace Tickets
             Tickets f2 = new Tickets();
             f2.ShowDialog();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            dgvTickets.DataSource = objClientes.MostrarTickets();
+        }
     }
 }
