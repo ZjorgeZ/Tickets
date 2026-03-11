@@ -15,12 +15,14 @@ Este proyecto es una aplicación para la gestión de tickets, diseñada para fac
 - **ADO.NET**
 - **WinForms**
 - Patrón **MVP** y arquitectura en capas
+  
+## 🤝 Contribuciones
+- Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, abre un issue o envía un pull request.
 
 ## 📦 Instalación
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/ZjorgeZ/ticket-system.git
+   git clone https://github.com/ZjorgeZ/tickets
 
 
-## 🤝 Contribuciones
-Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, abre un issue o envía un pull request.
+
