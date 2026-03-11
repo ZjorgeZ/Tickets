@@ -34,7 +34,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTickets = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -105,13 +105,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             // 
-            // dataGridView1
+            // dgvTickets
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 168);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(786, 231);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTickets.Location = new System.Drawing.Point(13, 168);
+            this.dgvTickets.Name = "dgvTickets";
+            this.dgvTickets.Size = new System.Drawing.Size(583, 231);
+            this.dgvTickets.TabIndex = 5;
             // 
             // textBox1
             // 
