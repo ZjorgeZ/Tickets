@@ -23,6 +23,5 @@ namespace Tickets
             dgvTickets.DataSource = objClientes.MostrarTickets();
         }
 
- 
     }
 }

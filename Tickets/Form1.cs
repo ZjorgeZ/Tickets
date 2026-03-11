@@ -12,7 +12,7 @@ namespace Tickets
 {
     public partial class Form1 : Form
     {
-        
+        CargarClientes objClientes = new CargarClientes();
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace Tickets
             //this.WindowState = FormWindowState.Maximized;  // Maximiza
             //panel1.Dock = DockStyle.Top;    // Ocupa todo el ancho, pegado arriba
 
-          
+            dgvTickets.DataSource = objClientes.MostrarTickets();
 
 
 

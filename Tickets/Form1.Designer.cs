@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +65,7 @@
             // btnExit
             // 
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnExit.Location = new System.Drawing.Point(761, 405);
+            this.btnExit.Location = new System.Drawing.Point(555, 413);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(41, 38);
@@ -133,10 +133,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 450);
+            this.ClientSize = new System.Drawing.Size(611, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTickets);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
@@ -146,7 +146,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +160,7 @@
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTickets;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
     }
