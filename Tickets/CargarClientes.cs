@@ -28,11 +28,8 @@ namespace Tickets
 
             return tabla;
         }
-
    
-
-    
-
+  
          public DataTable MostrarTickets()
         {
             SqlCommand cmd = new SqlCommand("SP_lticktes", conexion.AbrirConexion());
