@@ -21,5 +21,6 @@ Este proyecto es una aplicación para la gestión de tickets, diseñada para fac
    ```bash
    git clone https://github.com/ZjorgeZ/ticket-system.git
 
-   🤝 Contribuciones
+
+## 🤝 Contribuciones
 Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, abre un issue o envía un pull request.
