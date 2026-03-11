@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -51,6 +51,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(803, 57);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Sistema De Gestion De Tickets";
             // 
             // btnExit
             // 
@@ -102,16 +112,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(786, 231);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sistema De Gestion De Tickets";
             // 
             // textBox1
             // 
