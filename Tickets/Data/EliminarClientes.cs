@@ -16,10 +16,8 @@ namespace Tickets
         public void EliminarCliente(int id)
         {
             SqlCommand cmd = new SqlCommand("SP_eliminar", conexion.AbrirConexion());
-
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id", id);
-
             cmd.ExecuteNonQuery();
         }
 

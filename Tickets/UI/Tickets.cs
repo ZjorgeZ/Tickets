@@ -47,6 +47,21 @@ namespace Tickets
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Conexion conexion = new Conexion();
+
+            
+            SqlCommand cmdControl = new SqlCommand("SP_ControlTickets", conexion.AbrirConexion());
+            cmdControl.CommandType = CommandType.StoredProcedure;
+
+            int resultado = Convert.ToInt32(cmdControl.ExecuteScalar()); // o usar cmdControl.ExecuteNonQuery con RETURN
+
+            if (resultado == 0)
+            {
+                MessageBox.Show("Ya se han creado 5 tickets hoy. No se pueden crear más.");
+                return;
+            }
+
+
             if (string.IsNullOrEmpty(txtDescripcion.Text) ||
     string.IsNullOrEmpty(txtid_cliente.Text))
             {
@@ -152,6 +167,15 @@ namespace Tickets
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtid_cliente.Text) &&
+    string.IsNullOrWhiteSpace(txtnombre.Text) &&
+    string.IsNullOrWhiteSpace(txtcorreo.Text))
+            {
+                MessageBox.Show("Debe ingresar al menos un criterio de búsqueda");
+                return;
+            }
+
+
             int? id = string.IsNullOrWhiteSpace(txtid_cliente.Text) ? (int?)null : Convert.ToInt32(txtid_cliente.Text);
             string nombre = txtnombre.Text;
             string correo = txtcorreo.Text;
@@ -177,5 +201,17 @@ namespace Tickets
 
 
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void dgvTickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
     }
 }

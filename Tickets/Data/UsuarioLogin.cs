@@ -15,8 +15,6 @@ namespace Tickets
         Conexion conexion = new Conexion();
         public bool LoginUsuario(string usuario, string contraseña)
         {
-
-
             {
                 SqlCommand cmd = new SqlCommand("sp_LoginUsuario", conexion.AbrirConexion());
                 cmd.CommandType = CommandType.StoredProcedure;
