@@ -65,6 +65,87 @@ namespace Tickets
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (dgvTickets.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un ticket para Eliminar");
+                return;
+            }
+
+            DataGridViewRow fila = dgvTickets.SelectedRows[0];
+
+            var valorActive = fila.Cells["Active"].Value;
+
+            if (valorActive != null && valorActive.ToString() == "1")
+            {
+                DialogResult result = MessageBox.Show("¿Está seguro que desea ejecutar el procedimiento para este ticket?",
+                   "Confirmación",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Question
+               );
+
+                if (result == DialogResult.Yes)
+                {
+
+
+                    int idTicket = Convert.ToInt32(fila.Cells["id"].Value);
+
+                    EliminarClientes.EliminarTck0(idTicket);
+
+
+                    dgvTickets.DataSource = objClientes.MostrarTickets();
+
+
+                    LimpiarCampos();
+
+                    MessageBox.Show("Ticket Eliminado correctamente");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El ticket seleccionado no está activo.");
+            }
+
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvTickets.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un ticket para actualizar");
+                return;
+            }
+
+            DataGridViewRow fila = dgvTickets.SelectedRows[0];
+            int idTicket = Convert.ToInt32(fila.Cells["id"].Value);
+            string descripcion = txtDescripcion.Text;
+
+            // Mensaje de confirmación
+            DialogResult result = MessageBox.Show(
+                $"¿Está seguro que desea actualizar el ticket {idTicket} - {descripcion}?",
+                "Confirmación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Ejecuta el SP
+                ActualizarCliente.ActualizarTck0(idTicket, descripcion);
+
+                // Refresca el DataGridView
+                dgvTickets.DataSource = objClientes.MostrarTickets();
+
+                // Limpia campos
+                LimpiarCampos();
+
+                MessageBox.Show("Ticket Actualizado correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Operación cancelada por el usuario.");
+            }
+
 
         }
     }
