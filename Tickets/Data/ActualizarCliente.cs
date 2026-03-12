@@ -16,7 +16,6 @@ namespace Tickets
         {
             SqlCommand cmd = new SqlCommand("SP_actualizarCLiente", conexion.AbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
-
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@nombre", nombre);
             cmd.Parameters.AddWithValue("@apellido", apellido);

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tickets.UI;
 
 namespace Tickets
 {
@@ -33,7 +34,26 @@ namespace Tickets
 
             if (acceso)
             {
-                MessageBox.Show("Login exitoso");
+                // Mostrar formulario de loading
+                LoadingForm loading = new LoadingForm();
+                loading.Show();
+
+                // Simular carga (ejemplo con Task.Delay)
+                Task.Run(async () =>
+                {
+                    await Task.Delay(3000); // Simula proceso de carga
+                    this.Invoke(new Action(() =>
+                    {
+                        loading.Close();
+                        // Abrir el formulario principal
+                        Form1 main = new Form1();
+                        main.Show();
+                        this.Hide();
+                    }));
+                });
+
+
+                //MessageBox.Show("Login exitoso");
                 // Abrir formulario principal
             }
             else
@@ -42,9 +62,9 @@ namespace Tickets
                 return;
             }
 
-            Form1 mainForm = new Form1();
-            mainForm.Show();
-            this.Hide();
+            //Form1 mainForm = new Form1();
+            //mainForm.Show();
+            //this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)

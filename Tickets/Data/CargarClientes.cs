@@ -14,8 +14,7 @@ namespace Tickets
        
        
         Conexion conexion = new Conexion();
-
-        public DataTable MostrarClientes()
+            public DataTable MostrarClientes()
         {
             SqlCommand cmd = new SqlCommand("ST_leer", conexion.AbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;

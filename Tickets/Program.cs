@@ -16,7 +16,7 @@ namespace Tickets
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tickets());
+            Application.Run(new Login());
         }
     }
 }
