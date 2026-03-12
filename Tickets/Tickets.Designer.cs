@@ -33,8 +33,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -80,8 +80,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnActualizar);
+            this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtDescripcion);
@@ -92,24 +92,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Tickets";
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(428, 30);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(96, 39);
-            this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(328, 30);
+            this.btnActualizar.Location = new System.Drawing.Point(428, 30);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(96, 39);
-            this.btnActualizar.TabIndex = 8;
+            this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnActualizar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(328, 30);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(96, 39);
+            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAgregar
             // 
@@ -219,8 +220,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;

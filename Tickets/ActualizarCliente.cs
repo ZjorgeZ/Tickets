@@ -25,5 +25,19 @@ namespace Tickets
 
             cmd.ExecuteNonQuery();
         }
+
+        public static void ActualizarTck0(int id, string descripcion)
+        {
+            Conexion conexion = new Conexion();
+            SqlCommand cmd = new SqlCommand("SP_UpTickets", conexion.AbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@id", id);
+            
+            cmd.Parameters.AddWithValue("@descripcion", descripcion);
+
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }
