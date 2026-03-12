@@ -30,8 +30,8 @@
         {
             this.dgvTickets = new System.Windows.Forms.DataGridView();
             this.txtid_cliente = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -64,19 +64,19 @@
             this.txtid_cliente.Size = new System.Drawing.Size(100, 20);
             this.txtid_cliente.TabIndex = 5;
             // 
-            // textBox6
+            // txtnombre
             // 
-            this.textBox6.Location = new System.Drawing.Point(167, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 6;
+            this.txtnombre.Location = new System.Drawing.Point(167, 37);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.TabIndex = 6;
             // 
-            // textBox7
+            // txtcorreo
             // 
-            this.textBox7.Location = new System.Drawing.Point(305, 37);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 7;
+            this.txtcorreo.Location = new System.Drawing.Point(305, 37);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtcorreo.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -145,8 +145,8 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtid_cliente);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtnombre);
+            this.groupBox2.Controls.Add(this.txtcorreo);
             this.groupBox2.Location = new System.Drawing.Point(22, 54);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(549, 76);
@@ -162,6 +162,7 @@
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label4
             // 
@@ -215,8 +216,8 @@
 
         private System.Windows.Forms.DataGridView dgvTickets;
         private System.Windows.Forms.TextBox txtid_cliente;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.GroupBox groupBox2;

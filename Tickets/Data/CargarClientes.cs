@@ -11,9 +11,8 @@ namespace Tickets
 
     internal class CargarClientes
     {
-        //Conexion conexion = new Conexion();
        
-
+       
         Conexion conexion = new Conexion();
 
         public DataTable MostrarClientes()
