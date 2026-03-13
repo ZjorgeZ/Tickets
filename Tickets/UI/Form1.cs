@@ -21,8 +21,8 @@ namespace Tickets
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;   // Quita los bordes
-            this.WindowState = FormWindowState.Maximized;  // Maximiza
+           /* this.FormBorderStyle = FormBorderStyle.None;*/   // Quita los bordes
+          /*  this.WindowState = FormWindowState.Maximized;*/  // Maximiza
             panel1.Dock = DockStyle.Top;    // Ocupa todo el ancho, pegado arriba
 
             dgvTickets.DataSource = objClientes.MostrarTickets();
