@@ -18,10 +18,20 @@ namespace Tickets
         GuardarClientes cliente = new GuardarClientes();
         EliminarClientes eliminar = new EliminarClientes();
         ActualizarCliente actualizar = new ActualizarCliente();
-        BuscarCliente buscar = new BuscarCliente(); 
+        BuscarCliente buscar = new BuscarCliente();
+        private ToolTipHelper tooltipHelper;
         public Tickets()
         {
             InitializeComponent();
+            // Inicializar la clase
+            tooltipHelper = new ToolTipHelper();
+
+            // Asignar mensajes a los íconos
+            tooltipHelper.SetMessage(btnLimpiar, "Este es el ícono de Limpiar");
+            tooltipHelper.SetMessage(btnAgregar, "Este es el ícono de Agregar");
+            tooltipHelper.SetMessage(btnEliminar, "Este es el ícono de Eliminar");
+            tooltipHelper.SetMessage(btnBuscar, "Este es el ícono de Buscar");
+            tooltipHelper.SetMessage(btnExit, "Este es el ícono de salir");
         }
 
         private void Tickets_Load(object sender, EventArgs e)
@@ -212,6 +222,9 @@ namespace Tickets
 
         }
 
-
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
