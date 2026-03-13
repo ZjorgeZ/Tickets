@@ -49,6 +49,7 @@
     <Compile Include="Data\ActualizarCliente.cs" />
     <Compile Include="Data\BuscarCliente.cs" />
     <Compile Include="Data\CargarClientes.cs" />
+    <Compile Include="Data\ToolTipHelper.cs" />
     <Compile Include="UI\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>

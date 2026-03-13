@@ -38,6 +38,7 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -49,16 +50,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTickets
@@ -102,30 +100,28 @@
             // 
             // txtid_cliente
             // 
-            this.txtid_cliente.Location = new System.Drawing.Point(34, 37);
+            this.txtid_cliente.Location = new System.Drawing.Point(18, 45);
             this.txtid_cliente.Name = "txtid_cliente";
             this.txtid_cliente.Size = new System.Drawing.Size(100, 21);
             this.txtid_cliente.TabIndex = 5;
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(147, 37);
+            this.txtnombre.Location = new System.Drawing.Point(131, 45);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 21);
             this.txtnombre.TabIndex = 6;
             // 
             // txtcorreo
             // 
-            this.txtcorreo.Location = new System.Drawing.Point(263, 37);
+            this.txtcorreo.Location = new System.Drawing.Point(247, 45);
             this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(100, 21);
+            this.txtcorreo.Size = new System.Drawing.Size(117, 21);
             this.txtcorreo.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.dgvTickets);
@@ -140,10 +136,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Tickets";
             // 
+            // btnExit
+            // 
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnExit.Location = new System.Drawing.Point(507, 352);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(55, 54);
+            this.btnExit.TabIndex = 21;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(483, 147);
+            this.btnActualizar.Location = new System.Drawing.Point(483, 130);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(59, 65);
             this.btnActualizar.TabIndex = 9;
@@ -153,7 +161,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(483, 297);
+            this.btnEliminar.Location = new System.Drawing.Point(483, 213);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(60, 65);
             this.btnEliminar.TabIndex = 8;
@@ -188,8 +196,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnLimpiar);
             this.groupBox2.Controls.Add(this.btnBuscar);
             this.groupBox2.Controls.Add(this.label4);
@@ -199,7 +205,7 @@
             this.groupBox2.Controls.Add(this.txtnombre);
             this.groupBox2.Controls.Add(this.txtcorreo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(49, 108);
+            this.groupBox2.Location = new System.Drawing.Point(46, 108);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(522, 89);
             this.groupBox2.TabIndex = 9;
@@ -209,7 +215,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
-            this.btnLimpiar.Location = new System.Drawing.Point(444, 16);
+            this.btnLimpiar.Location = new System.Drawing.Point(450, 23);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(53, 49);
             this.btnLimpiar.TabIndex = 11;
@@ -219,9 +225,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(381, 16);
+            this.btnBuscar.Location = new System.Drawing.Point(384, 23);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(53, 49);
+            this.btnBuscar.Size = new System.Drawing.Size(53, 48);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -229,7 +235,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(265, 21);
+            this.label4.Location = new System.Drawing.Point(249, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 10;
@@ -238,7 +244,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(144, 21);
+            this.label3.Location = new System.Drawing.Point(128, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 9;
@@ -247,84 +253,49 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 20);
+            this.label2.Location = new System.Drawing.Point(18, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "ClienteID";
             // 
-            // label5
+            // panel1
             // 
-            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(12, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 89);
-            this.label5.TabIndex = 10;
+            this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(-1, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(608, 63);
+            this.panel1.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(184, 46);
+            this.label6.Location = new System.Drawing.Point(130, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 31);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Gestor de Tickets";
+            this.label6.Size = new System.Drawing.Size(324, 31);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "===Gestor de Tickets===";
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(385, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Buscar";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(447, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 15);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Limpiar";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(488, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 15);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Agregar";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(483, 213);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 15);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Actualizar";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(486, 362);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 15);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Eliminar";
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 95);
+            this.label5.TabIndex = 20;
             // 
             // Tickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 625);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tickets";
@@ -334,8 +305,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -361,12 +333,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Creacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Cliente;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnExit;
     }
 }

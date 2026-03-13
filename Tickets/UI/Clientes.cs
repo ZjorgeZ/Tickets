@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tickets.Data;
 
 namespace Tickets
 {
@@ -16,12 +17,27 @@ namespace Tickets
         GuardarClientes cliente = new GuardarClientes();
         EliminarClientes eliminar = new EliminarClientes();
         ActualizarCliente actualizar = new ActualizarCliente();
-         
+        private ToolTipHelper tooltipHelper;
+
+
+
         public Clientes()
         {
             InitializeComponent();
-            
+            // Inicializar la clase
+            tooltipHelper = new ToolTipHelper();
+
+            // Asignar mensajes a los íconos
+            tooltipHelper.SetMessage(btnLimpiar, "Este es el ícono de Limpiar");
+            tooltipHelper.SetMessage(btnActualizar, "Este es el ícono de Actualizar");
+            tooltipHelper.SetMessage(btnEliminar, "Este es el ícono de Eliminar");
+            tooltipHelper.SetMessage(btnGuardar, "Este es el ícono de Guardar");
+            tooltipHelper.SetMessage(btnExit, "Este es el ícono de salir");
         }
+
+
+            
+        
 
         private void Clientes_Load(object sender, EventArgs e)
         {
@@ -128,6 +144,11 @@ namespace Tickets
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
