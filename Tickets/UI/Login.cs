@@ -22,10 +22,9 @@ namespace Tickets
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+           
         }
-
-      
+             
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -73,6 +72,44 @@ namespace Tickets
             mainForm.ShowDialog();
             //mainForm.Show();
             //this.Hide();
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+      
+            if (txtUsuario.Text == "Usuario")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.Black;
+            }
+        
+    }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtContraseña.Text))
+            {
+                txtContraseña.Text = "Contraseña";
+                txtContraseña.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "Contraseña")
+            {
+                txtContraseña.Text = "";
+                txtContraseña.ForeColor = Color.Black;
+            }
         }
     }
 }

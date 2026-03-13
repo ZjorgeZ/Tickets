@@ -21,8 +21,8 @@ namespace Tickets
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;   // Quita los bordes
-            this.WindowState = FormWindowState.Maximized;  // Maximiza
+           /* this.FormBorderStyle = FormBorderStyle.None;*/   // Quita los bordes
+          /*  this.WindowState = FormWindowState.Maximized;*/  // Maximiza
             panel1.Dock = DockStyle.Top;    // Ocupa todo el ancho, pegado arriba
 
             dgvTickets.DataSource = objClientes.MostrarTickets();
@@ -53,6 +53,14 @@ namespace Tickets
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             dgvTickets.DataSource = objClientes.MostrarTickets();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Abrir el formulario principal
+            Login main = new Login();
+            main.Show();
+            this.Hide();
         }
     }
 }

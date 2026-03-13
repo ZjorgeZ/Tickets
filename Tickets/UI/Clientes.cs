@@ -24,10 +24,10 @@ namespace Tickets
         public Clientes()
         {
             InitializeComponent();
-            // Inicializar la clase
+            
             tooltipHelper = new ToolTipHelper();
 
-            // Asignar mensajes a los íconos
+          
             tooltipHelper.SetMessage(btnLimpiar, "Este es el ícono de Limpiar");
             tooltipHelper.SetMessage(btnActualizar, "Este es el ícono de Actualizar");
             tooltipHelper.SetMessage(btnEliminar, "Este es el ícono de Eliminar");
@@ -150,5 +150,7 @@ namespace Tickets
         {
             this.Close();
         }
+
+       
     }
 }

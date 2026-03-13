@@ -15,6 +15,12 @@ namespace Tickets.UI
         public LoadingForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;   // Quita los bordes
+        }
+
+        private void LoadingForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

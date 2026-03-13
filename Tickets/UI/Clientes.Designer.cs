@@ -223,6 +223,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(53, 56);
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -232,6 +233,7 @@
             this.btnLimpiar.Size = new System.Drawing.Size(53, 56);
             this.btnLimpiar.TabIndex = 23;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnExit
             // 
@@ -253,6 +255,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(53, 56);
             this.btnActualizar.TabIndex = 22;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnGuardar
             // 
@@ -262,11 +265,10 @@
             this.btnGuardar.Size = new System.Drawing.Size(53, 56);
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // dgvClientes
             // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -276,16 +278,15 @@
             this.Correo});
             this.dgvClientes.Location = new System.Drawing.Point(5, 21);
             this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(541, 329);
             this.dgvClientes.TabIndex = 19;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // id
             // 
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "ClienteID";
             this.id.Name = "id";
-            this.id.ReadOnly = true;
             this.id.Width = 55;
             // 
             // Nombre
@@ -293,28 +294,24 @@
             this.Nombre.DataPropertyName = "nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
             // 
             // Apellido
             // 
             this.Apellido.DataPropertyName = "apellido";
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
             // 
             // Cedula
             // 
             this.Cedula.DataPropertyName = "cedula";
             this.Cedula.HeaderText = "Cedula";
             this.Cedula.Name = "Cedula";
-            this.Cedula.ReadOnly = true;
             // 
             // Correo
             // 
             this.Correo.DataPropertyName = "correo";
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
             this.Correo.Width = 140;
             // 
             // Clientes
@@ -326,6 +323,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
