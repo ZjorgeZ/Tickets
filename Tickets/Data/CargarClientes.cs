@@ -11,12 +11,10 @@ namespace Tickets
 
     internal class CargarClientes
     {
-        //Conexion conexion = new Conexion();
        
-
+       
         Conexion conexion = new Conexion();
-
-        public DataTable MostrarClientes()
+            public DataTable MostrarClientes()
         {
             SqlCommand cmd = new SqlCommand("ST_leer", conexion.AbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
