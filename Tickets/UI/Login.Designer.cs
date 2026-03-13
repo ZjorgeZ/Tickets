@@ -40,6 +40,8 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.Location = new System.Drawing.Point(306, 71);
             this.btnLogin.Name = "btnLogin";
@@ -122,6 +124,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnLogin);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

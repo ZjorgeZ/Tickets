@@ -47,7 +47,9 @@
             this.ClientSize = new System.Drawing.Size(274, 284);
             this.Controls.Add(this.label1);
             this.Name = "LoadingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoadingForm";
+            this.Load += new System.EventHandler(this.LoadingForm_Load);
             this.ResumeLayout(false);
 
         }

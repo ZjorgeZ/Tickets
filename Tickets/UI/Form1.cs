@@ -54,5 +54,13 @@ namespace Tickets
         {
             dgvTickets.DataSource = objClientes.MostrarTickets();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Abrir el formulario principal
+            Login main = new Login();
+            main.Show();
+            this.Hide();
+        }
     }
 }
