@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tickets.Data;
+using Tickets.Modelo;
 
 namespace Tickets
 {
@@ -89,21 +90,13 @@ namespace Tickets
             txtCorreo.Clear();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private readonly ClienteService clienteService = new ClienteService();
+
+                private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.SelectedRows.Count == 0) 
-            { 
-                MessageBox.Show("Seleccione un cliente para eliminar");
-                return;
-            }
 
-            
-            int id = Convert.ToInt32(txtID.Text);
+            clienteService.EliminarCliente(Convert.ToInt32(txtID.Text), dgvClientes, LimpiarCampos);
 
-            eliminar.EliminarCliente(id);
-            dgvClientes.DataSource = objClientes.MostrarClientes();
-            LimpiarCampos();
-            MessageBox.Show("Cliente eliminado correctamente");
         }
 
         private void btnLimpiar_Click_1(object sender, EventArgs e)
@@ -113,22 +106,22 @@ namespace Tickets
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.SelectedRows.Count == 0)
+
+            Cliente cliente = new Cliente
             {
-                MessageBox.Show("Seleccione un cliente para actualizar");
-                return;
-            }
-            else {
-                int id = Convert.ToInt32(txtID.Text);
+                Id = Convert.ToInt32(txtID.Text),
+                Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
+                Cedula = txtCedula.Text,
+                Correo = txtCorreo.Text
+            };
 
-                actualizar.ActualizarCli(id, txtNombre.Text, txtApellido.Text, txtCedula.Text, txtCorreo.Text);
-                dgvClientes.DataSource = objClientes.MostrarClientes();
-                LimpiarCampos();
-                MessageBox.Show("Cliente actualizado correctamente");
+            clienteService.ActualizarCliente(cliente);
+            dgvClientes.DataSource = objClientes.MostrarClientes();
+            LimpiarCampos();
+            MessageBox.Show("Cliente actualizado correctamente");
 
-            }
-
-            
+        
         }
 
         private void btnExit_Click(object sender, EventArgs e)

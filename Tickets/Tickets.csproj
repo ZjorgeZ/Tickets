@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\ClienteService.cs" />
+    <Compile Include="Business\TicketService.cs" />
     <Compile Include="Data\ActualizarCliente.cs" />
     <Compile Include="Data\BuscarCliente.cs" />
     <Compile Include="Data\CargarClientes.cs" />
+    <Compile Include="Data\ClienteRepository.cs" />
+    <Compile Include="Data\TicketRepository.cs" />
     <Compile Include="Data\ToolTipHelper.cs" />
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\Ticket.cs" />
     <Compile Include="UI\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>

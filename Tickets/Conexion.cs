@@ -9,7 +9,7 @@ namespace Tickets
 {
     internal class Conexion
     {
-        private string cadena = "Server=TOR-ITM-03\\SQLEXPRESS;Database=DB;Trusted_Connection=True;TrustServerCertificate=true";
+        private string cadena = "Server=localhost\\SQLEXPRESS;Database=DB;Trusted_Connection=True;TrustServerCertificate=true";
 
         public SqlConnection AbrirConexion()
         {

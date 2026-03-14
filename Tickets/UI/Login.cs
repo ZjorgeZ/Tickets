@@ -24,7 +24,6 @@ namespace Tickets
         {
            
         }
-             
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -52,8 +51,6 @@ namespace Tickets
                 });
 
 
-                //MessageBox.Show("Login exitoso");
-                // Abrir formulario principal
             }
             else
             {
@@ -61,9 +58,7 @@ namespace Tickets
                 return;
             }
 
-            //Form1 mainForm = new Form1();
-            //mainForm.Show();
-            //this.Hide();
+     
         }
 
         private void label4_Click(object sender, EventArgs e)

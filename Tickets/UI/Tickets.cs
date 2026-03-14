@@ -157,7 +157,7 @@ namespace Tickets
             if (result == DialogResult.Yes)
             {
                 // Ejecuta el SP
-                ActualizarCliente.ActualizarTck0(idTicket, descripcion);
+                //ActualizarCliente.ActualizarTck0(idTicket, descripcion);
 
                 // Refresca el DataGridView
                 dgvTickets.DataSource = objClientes.MostrarTickets();

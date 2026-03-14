@@ -9,17 +9,17 @@ using System.Windows.Forms;
 
 namespace Tickets
 {
-        internal class EliminarClientes
+   
+    public class EliminarClientes
     {
-        Conexion conexion = new Conexion();
-
-        public void EliminarCliente(int id)
-        {
-            SqlCommand cmd = new SqlCommand("SP_eliminar", conexion.AbrirConexion());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
-        }
+       
+        //public void EliminarCliente(int id)
+        //{
+        //    SqlCommand cmd = new SqlCommand("SP_eliminar", conexion.AbrirConexion());
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.AddWithValue("@id", id);
+        //    cmd.ExecuteNonQuery();
+        //}
 
         public static void EliminarTck0(int id)
         {
